@@ -31,14 +31,14 @@
 
         /* Estilização do logo circular */
         .logo {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%; /* Forma circular */
             background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 5px;
+           
             border: 3px solid #e0e0e0; /* Borda cinza claro */
         }
 
