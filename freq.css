@@ -1,0 +1,610 @@
+
+/* Variáveis e reset */
+:root {
+    --primary: #3498db;
+    --secondary: #3a0ca3;
+    --success: #2ec4b6;
+    --warning: #ff9f1c;
+    --danger: #e63946;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --border: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* Reset CSS para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do corpo da página */
+body {
+    background-color: #f0f1f5;
+    /* Fundo cinza claro */
+}
+
+/* Cabeçalho com gradiente azul */
+.header {
+    background: linear-gradient(to right, #002346, #003c73, #0055aa);
+    /* Gradiente da esquerda para direita */
+    color: white;
+    display: flex;
+    /* Layout flexível para alinhar itens */
+    justify-content: space-between;
+    /* Espaço entre os elementos */
+    align-items: center;
+    /* Alinhamento vertical */
+    padding: 10px 20px;
+    position: relative;
+    /* Para posicionamento absoluto do menu mobile */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+}
+
+/* Container do logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilização do logo circular */
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* Forma circular */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #e0e0e0;
+    /* Borda cinza claro */
+}
+
+.logo img {
+    width: 170px;
+    height: 80px;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--dark);
+    line-height: 1.6;
+} */
+.tudo {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Container da navegação */
+.nav-container {
+    display: flex;
+    flex-grow: 1;
+    /* Ocupa o espaço disponível */
+    justify-content: center;
+    /* Centraliza os itens */
+    gap: 15px;
+    /* Espaço entre os itens */
+    margin-left: 20px;
+    
+}
+
+/* Estilo dos itens de navegação */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    /* Ícone acima do texto */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    min-width: 90px;
+}
+
+/* Caixas dos ícones de navegação */
+.nav-icon-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fundo branco transparente */
+    border-radius: 10px;
+    /* Cantos arredondados */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Texto dos itens de navegação */
+.nav-text {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Botão do menu mobile (hamburger) - escondido por padrão */
+.menu-toggle {
+    display: none;
+    /* Inicialmente oculto, aparece apenas em telas pequenas */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+/* Cabeçalho */
+.hae {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px var(--shadow);
+    background: linear-gradient(to right, #002346, #003c73, #0055aa);
+}
+
+.hae .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hae h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hae p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Sistema de abas */
+.tabs {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    
+}
+
+.tab-control {
+    display: none;
+}
+
+.tab-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.tab-label {
+    padding: 12px 24px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px var(--shadow);
+    user-select: none;
+}
+
+.tab-label:hover {
+    background-color: #f0f4f8;
+}
+
+.tab-content {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px var(--shadow);
+    animation: fadeIn 0.5s ease;
+    border-radius: 8px;
+     border-left: 4px solid #3498db
+}
+
+/* Lógica de funcionamento das abas com CSS */
+#tab1:checked ~ .tab-contents #content1,
+#tab2:checked ~ .tab-contents #content2,
+#tab3:checked ~ .tab-contents #content3 {
+    display: block;
+}
+
+#tab1:checked ~ .tab-labels label[for="tab1"],
+#tab2:checked ~ .tab-labels label[for="tab2"],
+#tab3:checked ~ .tab-labels label[for="tab3"] {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 20px;
+    
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Tabelas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background-color: rgba(67, 97, 238, 0.05);
+}
+
+/* Caixas de Seleção para Alunos */
+.student-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.student-checkbox {
+    display: block;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.student-checkbox:hover {
+    background-color: #f0f4f8;
+}
+
+.student-checkbox input {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + .student-checkbox {
+    background-color: rgba(67, 97, 238, 0.1);
+    border-color: var(--primary);
+}
+
+/* Gráficos */
+.graphs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.student-graph {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.student-info {
+    margin-bottom: 15px;
+}
+
+.student-info h3 {
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.student-info p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.graph-wrapper {
+    margin-top: 15px;
+    position: relative;
+}
+
+.graph-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.graph-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    position: relative;
+}
+
+.graph-label {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+.graph-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.graph-warning .graph-bar {
+    background: linear-gradient(90deg, var(--warning), var(--danger));
+}
+
+.attendance-summary {
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.attendance-summary h3 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary);
+}
+
+.stat-card h4 {
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.stat-card.warning {
+    border-left-color: var(--danger);
+}
+
+.stat-card.warning p {
+    color: var(--danger);
+}
+
+.stat-card.success {
+    border-left-color: var(--success);
+}
+
+.stat-card.success p {
+    color: var(--success);
+}
+
+/* Rodapé com mesmo gradiente do cabeçalho */
+.footer {
+    background: linear-gradient(to right, #002346, #003c73, #0055aa);
+    height: 40px;
+    margin-top: auto;
+    /* Empurra para o final da página */
+}
+
+/* Media query para tablets */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+        /* Reduz o padding */
+    }
+
+    .nav-container {
+        gap: 10px;
+        /* Reduz o espaço entre itens */
+    }
+
+    /* Reduz o tamanho dos ícones */
+    .nav-icon-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Reduz o tamanho da fonte */
+    .nav-text {
+        font-size: 10px;
+    }
+}
+/* Media query para dispositivos móveis */
+@media (max-width: 576px) {
+
+    /* Reduz o tamanho do logo */
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Transforma o menu em coluna vertical */
+    .nav-container {
+        display: none;
+        /* Esconde inicialmente */
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: linear-gradient(to right, #002346, #003c73);
+        z-index: 100;
+        /* Acima de outros elementos */
+        padding: 10px;
+    }
+
+    /* Classe para mostrar o menu quando ativado */
+    .nav-container.active {
+        display: flex;
+    }
+
+    /* Mostra o botão de menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ajusta layout dos itens de navegação para horizontal em móveis */
+    .nav-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 12px;
+        gap: 15px;
+    }
+
+    /* Ajusta os containers dos ícones */
+    .nav-icon-container {
+        margin-bottom: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Reduz o espaço no topo do conteúdo */
+    .content {
+        padding-top: 40px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .tab-labels {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .tab-label {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .graphs-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .student-checkboxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+    }
+    
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+}
