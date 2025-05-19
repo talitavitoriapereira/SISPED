@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Ausências - Turma A</title>
-  <link rel="stylesheet" href="freq.css">
+    <link rel="stylesheet" href="freq.css">
 </head>
+
 <body>
-     <!-- Cabeçalho com navegação -->
-     <header class="header">
+    <!-- Cabeçalho com navegação -->
+    <header class="header">
         <!-- Container do logo -->
         <div class="logo-container">
             <div class="logo">
@@ -92,405 +94,406 @@
     </header>
 
     <main>
-    <div class="tudo ">
-    <header class="hae">
-        <div class="container">
-            <h1>Registro de Ausências</h1>
-            <p>Controle de faltas e estatísticas por aluno</p>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div class="tabs">
-            <!-- Controles das abas -->
-            <input type="radio" name="tabs" id="tab1" class="tab-control" checked>
-            <input type="radio" name="tabs" id="tab2" class="tab-control">
-            <input type="radio" name="tabs" id="tab3" class="tab-control">
-            
-            <!-- Rótulos das abas -->
-            <div class="tab-labels">
-                <label for="tab1" class="tab-label">Registrar Ausências</label>
-                <label for="tab2" class="tab-label">Alunos e Estatísticas</label>
-                <label for="tab3" class="tab-label">Gráficos Individuais</label>
+        <div class="tudo ">
+            <header class="hae">
+                <div class="container">
+                    <h1>Registro de Ausências</h1>
+                    <p>Controle de faltas e estatísticas por aluno</p>
+                </div>
+            </header>
+
+            <div class="container">
+                <div class="tabs">
+                    <!-- Controles das abas -->
+                    <input type="radio" name="tabs" id="tab1" class="tab-control" checked>
+                    <input type="radio" name="tabs" id="tab2" class="tab-control">
+                    <input type="radio" name="tabs" id="tab3" class="tab-control">
+
+                    <!-- Rótulos das abas -->
+                    <div class="tab-labels">
+                        <label for="tab1" class="tab-label">Registrar Ausências</label>
+                        <label for="tab2" class="tab-label">Alunos e Estatísticas</label>
+                        <label for="tab3" class="tab-label">Gráficos Individuais</label>
+                    </div>
+
+                    <!-- Conteúdo das abas -->
+                    <div class="tab-contents">
+                        <!-- Aba 1: Registrar Ausências -->
+                        <div id="content1" class="tab-content">
+                            <h2>Registrar Ausências</h2>
+                            <p>Selecione a data e os alunos ausentes para registrar as faltas.</p>
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="date">Data da Aula:</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Alunos Ausentes:</label>
+                                    <div class="student-checkboxes">
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="1">
+                                            Ana Silva
+                                        </label>
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="2">
+                                            Bruno Santos
+                                        </label>
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="3">
+                                            Carla Oliveira
+                                        </label>
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="4">
+                                            Daniel Pereira
+                                        </label>
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="5">
+                                            Eduarda Costa
+                                        </label>
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="6">
+                                            Fábio Almeida
+                                        </label>
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="7">
+                                            Gabriela Martins
+                                        </label>
+                                        <label class="student-checkbox">
+                                            <input type="checkbox" name="absent" value="8">
+                                            Henrique Lima
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tab2" class="btn btn-block">Registrar Ausências</label>
+                                </div>
+                            </form>
+
+                            <h3>Registros Recentes</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Presentes</th>
+                                        <th>Ausentes</th>
+                                        <th>Percentual de Presença</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>15/05/2025</td>
+                                        <td>6</td>
+                                        <td>2</td>
+                                        <td>75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14/05/2025</td>
+                                        <td>7</td>
+                                        <td>1</td>
+                                        <td>87.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13/05/2025</td>
+                                        <td>8</td>
+                                        <td>0</td>
+                                        <td>100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/05/2025</td>
+                                        <td>5</td>
+                                        <td>3</td>
+                                        <td>62.5%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Aba 2: Alunos e Estatísticas -->
+                        <div id="content2" class="tab-content">
+                            <h2>Alunos e Estatísticas</h2>
+
+                            <div class="attendance-summary">
+                                <h3>Resumo Geral da Turma</h3>
+                                <div class="stats-container">
+                                    <div class="stat-card">
+                                        <h4>Total de Aulas</h4>
+                                        <p>20</p>
+                                    </div>
+                                    <div class="stat-card success">
+                                        <h4>Média de Presença</h4>
+                                        <p>85%</p>
+                                    </div>
+                                    <div class="stat-card warning">
+                                        <h4>Alunos em Risco</h4>
+                                        <p>2</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Presenças</th>
+                                        <th>Ausências</th>
+                                        <th>% Presença</th>
+                                        <th>Situação</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ana Silva</td>
+                                        <td>18</td>
+                                        <td>2</td>
+                                        <td>90%</td>
+                                        <td>Regular</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bruno Santos</td>
+                                        <td>16</td>
+                                        <td>4</td>
+                                        <td>80%</td>
+                                        <td>Regular</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carla Oliveira</td>
+                                        <td>19</td>
+                                        <td>1</td>
+                                        <td>95%</td>
+                                        <td>Regular</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Daniel Pereira</td>
+                                        <td>15</td>
+                                        <td>5</td>
+                                        <td>75%</td>
+                                        <td>Regular</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eduarda Costa</td>
+                                        <td>14</td>
+                                        <td>6</td>
+                                        <td>70%</td>
+                                        <td>Regular</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fábio Almeida</td>
+                                        <td>12</td>
+                                        <td>8</td>
+                                        <td>60%</td>
+                                        <td>Em risco</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gabriela Martins</td>
+                                        <td>20</td>
+                                        <td>0</td>
+                                        <td>100%</td>
+                                        <td>Regular</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Henrique Lima</td>
+                                        <td>11</td>
+                                        <td>9</td>
+                                        <td>55%</td>
+                                        <td>Em risco</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="form-group">
+                                <label for="tab3" class="btn btn-block">Ver Gráficos Individuais</label>
+                            </div>
+                        </div>
+
+                        <!-- Aba 3: Gráficos Individuais -->
+                        <div id="content3" class="tab-content">
+                            <h2>Gráficos Individuais de Ausência</h2>
+                            <p>Visualização gráfica das ausências por aluno.</p>
+
+                            <div class="graphs-container">
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Ana Silva</h3>
+                                        <p>Total de aulas: 20 | Ausências: 2</p>
+                                    </div>
+                                    <div class="graph-wrapper">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 10%;">
+                                                <span class="graph-label">10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Bruno Santos</h3>
+                                        <p>Total de aulas: 20 | Ausências: 4</p>
+                                    </div>
+                                    <div class="graph-wrapper">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 20%;">
+                                                <span class="graph-label">20%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Carla Oliveira</h3>
+                                        <p>Total de aulas: 20 | Ausências: 1</p>
+                                    </div>
+                                    <div class="graph-wrapper">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 5%;">
+                                                <span class="graph-label">5%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Daniel Pereira</h3>
+                                        <p>Total de aulas: 20 | Ausências: 5</p>
+                                    </div>
+                                    <div class="graph-wrapper">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 25%;">
+                                                <span class="graph-label">25%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Eduarda Costa</h3>
+                                        <p>Total de aulas: 20 | Ausências: 6</p>
+                                    </div>
+                                    <div class="graph-wrapper">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 30%;">
+                                                <span class="graph-label">30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Fábio Almeida</h3>
+                                        <p>Total de aulas: 20 | Ausências: 8</p>
+                                    </div>
+                                    <div class="graph-wrapper graph-warning">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 40%;">
+                                                <span class="graph-label">40%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Gabriela Martins</h3>
+                                        <p>Total de aulas: 20 | Ausências: 0</p>
+                                    </div>
+                                    <div class="graph-wrapper">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 0%;">
+                                                <span class="graph-label">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-graph">
+                                    <div class="student-info">
+                                        <h3>Henrique Lima</h3>
+                                        <p>Total de aulas: 20 | Ausências: 9</p>
+                                    </div>
+                                    <div class="graph-wrapper graph-warning">
+                                        <div class="graph-bar-container">
+                                            <div class="graph-bar" style="width: 45%;">
+                                                <span class="graph-label">45%</span>
+                                            </div>
+                                        </div>
+                                        <div class="graph-scale">
+                                            <span>0%</span>
+                                            <span>25%</span>
+                                            <span>50%</span>
+                                            <span>75%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Conteúdo das abas -->
-            <div class="tab-contents">
-                <!-- Aba 1: Registrar Ausências -->
-                <div id="content1" class="tab-content">
-                    <h2>Registrar Ausências</h2>
-                    <p>Selecione a data e os alunos ausentes para registrar as faltas.</p>
-                    
-                    <form>
-                        <div class="form-group">
-                            <label for="date">Data da Aula:</label>
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Alunos Ausentes:</label>
-                            <div class="student-checkboxes">
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="1">
-                                    Ana Silva
-                                </label>
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="2">
-                                    Bruno Santos
-                                </label>
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="3">
-                                    Carla Oliveira
-                                </label>
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="4">
-                                    Daniel Pereira
-                                </label>
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="5">
-                                    Eduarda Costa
-                                </label>
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="6">
-                                    Fábio Almeida
-                                </label>
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="7">
-                                    Gabriela Martins
-                                </label>
-                                <label class="student-checkbox">
-                                    <input type="checkbox" name="absent" value="8">
-                                    Henrique Lima
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="tab2" class="btn btn-block">Registrar Ausências</label>
-                        </div>
-                    </form>
-                    
-                    <h3>Registros Recentes</h3>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Data</th>
-                                <th>Presentes</th>
-                                <th>Ausentes</th>
-                                <th>Percentual de Presença</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>15/05/2025</td>
-                                <td>6</td>
-                                <td>2</td>
-                                <td>75%</td>
-                            </tr>
-                            <tr>
-                                <td>14/05/2025</td>
-                                <td>7</td>
-                                <td>1</td>
-                                <td>87.5%</td>
-                            </tr>
-                            <tr>
-                                <td>13/05/2025</td>
-                                <td>8</td>
-                                <td>0</td>
-                                <td>100%</td>
-                            </tr>
-                            <tr>
-                                <td>12/05/2025</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>62.5%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <!-- Aba 2: Alunos e Estatísticas -->
-                <div id="content2" class="tab-content">
-                    <h2>Alunos e Estatísticas</h2>
-                    
-                    <div class="attendance-summary">
-                        <h3>Resumo Geral da Turma</h3>
-                        <div class="stats-container">
-                            <div class="stat-card">
-                                <h4>Total de Aulas</h4>
-                                <p>20</p>
-                            </div>
-                            <div class="stat-card success">
-                                <h4>Média de Presença</h4>
-                                <p>85%</p>
-                            </div>
-                            <div class="stat-card warning">
-                                <h4>Alunos em Risco</h4>
-                                <p>2</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Presenças</th>
-                                <th>Ausências</th>
-                                <th>% Presença</th>
-                                <th>Situação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Ana Silva</td>
-                                <td>18</td>
-                                <td>2</td>
-                                <td>90%</td>
-                                <td>Regular</td>
-                            </tr>
-                            <tr>
-                                <td>Bruno Santos</td>
-                                <td>16</td>
-                                <td>4</td>
-                                <td>80%</td>
-                                <td>Regular</td>
-                            </tr>
-                            <tr>
-                                <td>Carla Oliveira</td>
-                                <td>19</td>
-                                <td>1</td>
-                                <td>95%</td>
-                                <td>Regular</td>
-                            </tr>
-                            <tr>
-                                <td>Daniel Pereira</td>
-                                <td>15</td>
-                                <td>5</td>
-                                <td>75%</td>
-                                <td>Regular</td>
-                            </tr>
-                            <tr>
-                                <td>Eduarda Costa</td>
-                                <td>14</td>
-                                <td>6</td>
-                                <td>70%</td>
-                                <td>Regular</td>
-                            </tr>
-                            <tr>
-                                <td>Fábio Almeida</td>
-                                <td>12</td>
-                                <td>8</td>
-                                <td>60%</td>
-                                <td>Em risco</td>
-                            </tr>
-                            <tr>
-                                <td>Gabriela Martins</td>
-                                <td>20</td>
-                                <td>0</td>
-                                <td>100%</td>
-                                <td>Regular</td>
-                            </tr>
-                            <tr>
-                                <td>Henrique Lima</td>
-                                <td>11</td>
-                                <td>9</td>
-                                <td>55%</td>
-                                <td>Em risco</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="form-group">
-                        <label for="tab3" class="btn btn-block">Ver Gráficos Individuais</label>
-                    </div>
-                </div>
-                
-                <!-- Aba 3: Gráficos Individuais -->
-                <div id="content3" class="tab-content">
-                    <h2>Gráficos Individuais de Ausência</h2>
-                    <p>Visualização gráfica das ausências por aluno.</p>
-                    
-                    <div class="graphs-container">
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Ana Silva</h3>
-                                <p>Total de aulas: 20 | Ausências: 2</p>
-                            </div>
-                            <div class="graph-wrapper">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 10%;">
-                                        <span class="graph-label">10%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Bruno Santos</h3>
-                                <p>Total de aulas: 20 | Ausências: 4</p>
-                            </div>
-                            <div class="graph-wrapper">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 20%;">
-                                        <span class="graph-label">20%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Carla Oliveira</h3>
-                                <p>Total de aulas: 20 | Ausências: 1</p>
-                            </div>
-                            <div class="graph-wrapper">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 5%;">
-                                        <span class="graph-label">5%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Daniel Pereira</h3>
-                                <p>Total de aulas: 20 | Ausências: 5</p>
-                            </div>
-                            <div class="graph-wrapper">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 25%;">
-                                        <span class="graph-label">25%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Eduarda Costa</h3>
-                                <p>Total de aulas: 20 | Ausências: 6</p>
-                            </div>
-                            <div class="graph-wrapper">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 30%;">
-                                        <span class="graph-label">30%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Fábio Almeida</h3>
-                                <p>Total de aulas: 20 | Ausências: 8</p>
-                            </div>
-                            <div class="graph-wrapper graph-warning">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 40%;">
-                                        <span class="graph-label">40%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Gabriela Martins</h3>
-                                <p>Total de aulas: 20 | Ausências: 0</p>
-                            </div>
-                            <div class="graph-wrapper">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 0%;">
-                                        <span class="graph-label">0%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="student-graph">
-                            <div class="student-info">
-                                <h3>Henrique Lima</h3>
-                                <p>Total de aulas: 20 | Ausências: 9</p>
-                            </div>
-                            <div class="graph-wrapper graph-warning">
-                                <div class="graph-bar-container">
-                                    <div class="graph-bar" style="width: 45%;">
-                                        <span class="graph-label">45%</span>
-                                    </div>
-                                </div>
-                                <div class="graph-scale">
-                                    <span>0%</span>
-                                    <span>25%</span>
-                                    <span>50%</span>
-                                    <span>75%</span>
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-    </div>
     </main>
 
-<!-- Rodapé da página -->
-<footer class="footer">
-    <!-- Espaço para conteúdo do rodapé -->
-</footer>
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <!-- Espaço para conteúdo do rodapé -->
+    </footer>
 
 </body>
+
 </html>
